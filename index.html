@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Demo</title>
+	<style>
+	body {
+	    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	    font-size: 14px;
+	    line-height: 1.428571429;
+	    color: #333;
+	    background-color: #fff;
+	}
+
+	a {
+	    text-decoration: none;
+	    color: #428bca;
+	}
+
+	a:hover, a:focus {
+	    color: #2a6496;
+	    text-decoration: underline;
+	}
+
+	a:active, a:hover {
+	    outline: 0;
+	}
+
+	div.wrapper {
+	    background: black;
+	    display: inline-block;
+	}
+
+	a.opener {
+	    display: inline-block;
+    	padding: 5px 10px;
+	}
+	</style>
+</head>
+<body>
+	<div id="thumbnails">
+
+		<a href="http://www.jquery-plugins.hu/demo/59/images/img1.jpg">
+    <img src="http://www.jquery-plugins.hu/demo/59/images/img1-s.jpg" alt="" title="cím 1" />
+  </a>
+  <a href="http://www.jquery-plugins.hu/demo/59/images/img2.jpg">
+    <img src="http://www.jquery-plugins.hu/demo/59/images/img2-s.jpg" alt="" title="cím 1" />
+  </a>
+  <a href="http://www.jquery-plugins.hu/demo/59/images/img3.jpg">
+    <img src="http://www.jquery-plugins.hu/demo/59/images/img3-s.jpg" alt="" title="cím 1" />
+  </a>
+	</div>
+
+	<div class="wrapper">
+		<a class="opener" href="https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___2.jpg" title="" data-images='[{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___3.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___4.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___5.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___6.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___7.jpg"}}]'>More images</a>
+	</div>
+	<div class="wrapper">
+		<a class="opener" href="#" title="" data-images='[{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA_411_S_Main_St__404_CA_90013__3.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA_411_S_Main_St__404_CA_90013__4.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA_411_S_Main_St__404_CA_90013__5.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA_411_S_Main_St__404_CA_90013__6.jpg"}}]'>More images</a>
+	</div>
+	<div class="wrapper">
+		<a class="opener" href="#" title="" data-images='[{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___3.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___4.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___5.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___6.jpg"}},{"media":{"src":"https://s3-us-west-2.amazonaws.com/rbdev/Downtown_LA___7.jpg"}}]'>More images</a>
+	</div>
+
+	<script src="yoxview-init.js" type="text/javascript"></script>
+	<script type="text/javascript">
+    $("#thumbnails").yoxview({
+	    backgroundColor: 'Blue',
+	    playDelay: 5000
+	});
+
+    $('.opener').each( function (){
+    	var self = $( this ),
+    		images = self.data( 'images' );
+
+    	console.log( [self, images ] );
+
+    	self.yoxview({
+    		autoHideMenu: false,
+    	    images: images
+    	});
+    } );
+	</script>
+</body>
+</html>

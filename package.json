@@ -1,0 +1,24 @@
+{
+  "name": "yoxview",
+  "version": "0.1.0",
+  "description": "HTML5 gallery library",
+  "main": "yoxview-init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruzzll/yoxview.git"
+  },
+  "keywords": [
+    "library",
+    "html5",
+    "gallery"
+  ],
+  "author": "Yossi Kolesnicov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruzzll/yoxview/issues"
+  },
+  "homepage": "https://github.com/ruzzll/yoxview#readme"
+}
